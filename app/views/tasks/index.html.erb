@@ -1,0 +1,10 @@
+<h1> My tasks </h1>
+<h2><%= link_to "New Task", task_new_path %></h2>
+<%# redirige vers task/new parce task_new c'est son "alias"%>
+
+  <% @tasks.each do |task| %>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+  <label class="form-check-label" for="flexCheckIndeterminate"><%= link_to task.title, task_path(task) %>
+  </div>
+  <% end %>
